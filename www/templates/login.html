@@ -1,0 +1,25 @@
+<ion-view>
+    <ion-content>
+        <div class="login-content">
+            <div class="alignCenter"> 
+                <img src="img/aig_logo.png" alt="AIG" height="50px" width="90px" />
+                <p class="login-app-title">Sign Into Insurance Glossary</p>
+            </div>
+            <label class="ga-login-input"> <span ng-class="{'hide-visibility': !login.user.username.length}">Username</span>
+                <input placeholder="Username" type="text" ng-model="login.user.username"> </label>
+            <label class="ga-login-input"><span ng-class="{'hide-visibility': !login.user.password.length}">Password</span>
+                <input placeholder="Password" type="password" ng-model="login.user.password"> </label>
+            <div class="login-checkboxes">
+            <label>
+                <input type="checkbox" ng-model="login.user.saveusername">Save Username</label>
+            <label>
+                <input type="checkbox" ng-model="login.user.isTouchEnabled">Enable Touch ID</label>
+            </div>
+            <div class="alignCenter login-btn">
+                <button ng-click="login.loginApp()" ng-disabled="login.user.loginInProgress">SIGN IN</button> 
+                <p><a href="">Forgot Your Password?</a></p>
+            </div>
+<!--            <div ng-click="login.loginApp()" style="height: 50px; width: 100px; background-color: blue;">CLICK ME</div>-->
+        </div>
+    </ion-content>
+</ion-view>

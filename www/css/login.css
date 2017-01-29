@@ -1,0 +1,47 @@
+/* common css */
+.alignCenter {
+    text-align: center;
+}
+
+.hide-visibility{
+    visibility: hidden;
+}
+
+.login-content {
+    margin: 10%;
+}
+
+.ga-login-input input {
+    text-align: left !important;
+    border-bottom: 1px solid grey;
+    border-radius: 0;
+    width: 100%;
+    font-size: 1.125em;
+}
+
+.ga-login-input span{
+    color: #414348;
+    font-size: .75em;
+}
+
+.login-checkboxes {
+    margin-top: 5%;
+}
+
+.login-btn {
+    margin-top: 15%;
+}
+
+.login-btn button{
+    width: 80%;
+    background-color: #21A000;
+    border-radius: 100px;
+    border-color: #21A000;
+    color: #FFFFFF;
+}
+
+.login-app-title{
+    color: #005984;
+    font-size: 1.5em;
+}
+

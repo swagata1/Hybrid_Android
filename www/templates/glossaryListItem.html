@@ -1,0 +1,33 @@
+<ion-view>
+    <!-- <ion-header-bar class="header-grad">       
+        <div class="light"><i class="icon ion-ios-arrow-left">GLOSSARY</i></div>		
+    </ion-header-bar>-->
+    <ion-nav-bar class="header-grad">
+        <ion-nav-back-button class="button-clear">
+           <i class="icon ion-ios-arrow-left"></i>GLOSSARY
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content>
+
+        <div class="ga-detail-bar">
+            <center>
+                INFORMATIONAL USE ONLY
+            </center>
+        </div>
+
+        <div class="ga-detail-box">
+            <h1><font color="blue">{{detailObj.name}}</font></h1>
+            <p> {{detailObj.description}}</p>
+            <div class="ga-email-suggestion-box calm">
+                <i class="ion-ios-email-outline" ng-click="composeEmail()"></i>
+                <span>Have a Suggestion?</span>
+            </div>
+        </div>
+        
+    </ion-content>
+</ion-view>
+
+
+
+

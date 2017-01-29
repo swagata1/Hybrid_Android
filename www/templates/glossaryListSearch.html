@@ -1,0 +1,57 @@
+<ion-view>
+   
+    <ion-header-bar class="header-grad">
+        <button class="button ga-info-button" ng-click="logout()"><i class="icon ion-power light"></i></button>
+        <h1 class="title ga-center" align-title="center">GLOSSARY</h1>
+        <button class="button ga-info-button" ng-click="goToAboutPage()"><i class="icon ion-ios-information-outline light"></i></button>
+    </ion-header-bar>
+    <ion-header-bar class="bar-subheader header-grad">
+        <label class="item item-input-wrapper"> <i class="icon ion-search placeholder-icon"></i>
+            <input class="item item-input" type="search" placeholder="Search" ng-change="search()" ng-model="searchItem"> </label>
+        <button class="button button-positive" ng-click="clearSearch()">Cancel</button>
+    </ion-header-bar>
+    <ion-content scroll="false" class="has-subheader" id="homeContent">
+        <ion-scroll overflow-scroll="false" style="height: 100%; width:90%">
+            <ion-list>
+                <ion-item class="item" collection-repeat="item in searchResult" item-height="39" ng-click="!item.isLetter && openDetails(item)" on-hold="!item.isLetter && saveToLocal(item)" ng-class="{'item-divider': item.isLetter}">
+                    <p>{{item.name || item.letter}}</p>
+                </ion-item>
+            </ion-list>
+        </ion-scroll>
+        <div class="content-2-scrollbar" ng-style="{'height': scrollbarHeight+'px'}">
+            <ul ng-touchmove="touchMove($event)" ng-touchstart="touchStart($event)">
+                <li class="ga-scrollbar-items" ng-style="{'height': scrollBarItem.height+'px', 'font-size':scrollBarItem.fontSize+'px'}" ng-click="goToIndex(item)" ng-repeat="item in alphaIndexes">{{item}}</li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-view>
+<!--<ion-view view-title="GLOSSARY LIST">
+
+    <ion-header-bar class="header-grad">
+        <button class="button ga-info-button" ng-click="logout()"><i class="icon ion-power light"></i></button>
+        <h1 class="title ga-center" align-title="center">GLOSSARY</h1>
+        <button class="button ga-info-button" ng-click="goToAboutPage()"><i class="icon ion-ios-information-outline light"></i></button>
+    </ion-header-bar>
+	
+    <ion-header-bar class="bar-subheader header-grad">
+        <label class="item item-input-wrapper"> <i class="icon ion-search placeholder-icon"></i>
+            <input class="item item-input" type="search" placeholder="Search" ng-change="search()" ng-model="searchItem"> </label>
+        <button class="button button-positive" ng-click="clearSearch()">Cancel</button>
+    </ion-header-bar>
+	
+    <ion-content scroll="false" class="has-subheader" id="homeContent">
+        <ion-scroll overflow-scroll="false" style="height: 100%; width:90%">
+            <ion-list>
+                <ion-item class="item" collection-repeat="item in searchResult" item-height="39" ng-click="!item.isLetter && openDetails(item)" on-hold="onHold(item)" ng-class="{'item-divider': item.isLetter}">
+                    <p>{{item.name || item.letter}}</p>
+                </ion-item>
+            </ion-list>
+        </ion-scroll>
+        <div class="content-2-scrollbar" ng-style="{'height': scrollbarHeight+'px'}">
+            <ul ng-touchmove="touchMove($event)" ng-touchstart="touchStart($event)">
+                <li class="ga-scrollbar-items" ng-style="{'height': scrollBarItem.height+'px', 'font-size':scrollBarItem.fontSize+'px'}" ng-click="goToIndex(item)" ng-repeat="item in alphaIndexes">{{item}}</li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-view>
+-->

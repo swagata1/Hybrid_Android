@@ -1,0 +1,25 @@
+<ion-view view-title="My Quick List">
+  <ion-content>    
+	<div class="btn" align="right">
+		<button class="button button-positive" ng-click="reload()" >Reload</button>
+		<button class="button button-positive" ng-click="removeStore()" >Delete All</button>
+	</div>	
+
+		<ion-list>
+			<ion-item class="item" ng-repeat="item in searchResult">
+				<div class="card list">
+				   <div class="item item-divider">
+					  {{item.name}}
+				   </div>					   
+				   <div class="item item-text-wrap">
+					  {{item.desc}}
+				   </div>
+					<div class="item item-divider" align="right">
+						<button class="button button-positive" ng-click="deleteItem(item)" >Remove</button>
+					</div>					   
+				</div>
+			</ion-item>
+		</ion-list>
+     	
+  </ion-content>
+</ion-view>
